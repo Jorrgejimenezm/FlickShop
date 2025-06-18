@@ -25,7 +25,7 @@
     position: relative;
 }
 
-/* Botón de "Filtros" */
+/* BotÃ³n de "Filtros" */
 .filterToggleBtn {
     background: transparent;
     border: none;
@@ -292,7 +292,7 @@
     position: absolute;
     width: 5%;
     border-radius: 3px;
-    left: 22%;
+    left: 24%;
     bottom: 23px;
     opacity: 0;
     z-index: 1;
