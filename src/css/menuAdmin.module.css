@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #002147;
+}
+
+.content {
+    margin-left: 20%;
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto;
+}
+
+.backButton {
+    background-color: #ffa73f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+    .backButton:hover {
+        background-color: #cc852e;
+    }

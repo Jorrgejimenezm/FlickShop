@@ -1,0 +1,83 @@
+.container {
+    padding: 2rem;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+}
+
+.title-container {
+    background: #002147;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    color: #002147;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 33, 71, 0.1);
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    border: 2px solid transparent;
+}
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(1, 33, 71, 0.2);
+        border-color: #ffa73f;
+    }
+
+    .card h3 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+
+.number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffa73f;
+}
+
+
+.loading {
+    color: #002147;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+}
+
+.chartContainer {
+    margin-top: 3rem;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 33, 71, 0.15);
+}
+
+.chartTitle {
+    color: #002147;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+}

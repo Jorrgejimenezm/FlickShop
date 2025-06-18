@@ -1,0 +1,357 @@
+.background {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../img/fondoMadera.jp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Contenedor principal de los filtros */
+.filtersContainer {
+    background-color: #002147;
+    border-radius: 12px;
+    padding: 0.5rem;
+    width: 55%;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Botón de "Filtros" */
+.filterToggleBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #ffffff;
+    transition: transform 0.2s, color 0.2s;
+}
+
+    .filterToggleBtn:hover {
+        transform: scale(1.1);
+        color: #ffa73f;
+    }
+
+.separator {
+    height: 90px;
+    width: 3px;
+    background-color: white;
+    align-self: center;
+    border-radius: 2px;
+}
+
+.categoryButton {
+    border: none;
+    background: transparent;
+    text-align: center;
+    transition: color 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    padding: 0.5rem;
+}
+
+.categoryImage {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.2s, border 0.2s;
+}
+
+.categoryActive {
+    border: 2px solid #ffa73f;
+}
+
+.categoryButton:hover .categoryImage {
+    transform: scale(1.1);
+}
+
+.categoryButton:hover p {
+    transform: scale(1.1);
+    color: #ffa73f;
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Filtros avanzados desplegables */
+.advancedFilters {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin-left: 25%;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.categoryTitle {
+    margin: 0;
+    transition: transform 0.2s, color 0.2s;
+    color: white;
+}
+
+.categoryActiveTitle {
+    color: #ffa73f;
+}
+
+.button {
+    position: relative;
+    border-radius: 6px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #cc0000;
+    background-color: #e50000;
+    overflow: hidden;
+    padding: 0;
+    font-family: inherit;
+    margin-left:16%;
+}
+
+.button,
+.button__icon,
+.button__text {
+    transition: all 0.3s;
+    user-select: none;
+    border: none;
+}
+
+    .button .button__text {
+        transform: translateX(35px);
+        color: #fff;
+        font-weight: 600;
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    .button .button__icon {
+        position: absolute;
+        transform: translateX(109px);
+        height: 100%;
+        width: 39px;
+        background-color: #cc0000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button .svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .button:hover {
+        background: #cc0000;
+    }
+
+        .button:hover .button__text {
+            color: transparent;
+        }
+
+        .button:hover .button__icon {
+            width: 148px;
+            transform: translateX(0);
+        }
+
+    .button:active .button__icon {
+        background-color: #b20000;
+    }
+
+    .button:active {
+        border: 1px solid #b20000;
+    }
+
+
+/* Estilo card */
+.productCard {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 400px; 
+}
+
+.productCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+}
+
+
+    .productCard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+        border: 3px solid #002147
+    }
+
+.productImage {
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+}
+
+.productTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #002147;
+    margin-bottom: 0.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.productDescription {
+    font-size: 0.9rem;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 0.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.productPrice {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #002147;
+}
+
+
+.lowStock {
+    color: #d40000;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+
+.outOfStock {
+    color: #a10000; 
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.addToCartBtn {
+    width: 155px;
+    height: 50px;
+    border: none;
+    border-radius: 25px; 
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    background-color: #ffa73f;
+    box-shadow: 0 20px 30px -7px rgba(27, 27, 27, 0.219);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+    .addToCartBtn:active {
+        transform: scale(0.96);
+    }
+
+.cart {
+    z-index: 100;
+}
+
+.product {
+    position: absolute;
+    width: 5%;
+    border-radius: 3px;
+    left: 22%;
+    bottom: 23px;
+    opacity: 0;
+    z-index: 1;
+    fill: rgb(211, 211, 211);
+}
+
+.addToCartBtn:hover .product {
+    animation: slide-in-top 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0) rotate(-90deg);
+        opacity: 1;
+    }
+}
+
+.addToCartBtn:hover .cart {
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.quantitySelector {
+    width: 70px;
+    height: 36px;
+    padding: 0 10px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.quantitySelector:hover {
+    border-color: #ffa73f;
+    box-shadow: 0 0 6px rgba(255, 167, 63, 0.4);
+    background-color: #fffefc;
+}
+
+.quantitySelector:focus {
+    box-shadow: 0 0 8px rgba(255, 167, 63, 0.6);
+    background-color: #fff;
+}
