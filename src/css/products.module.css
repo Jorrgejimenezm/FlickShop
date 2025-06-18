@@ -290,9 +290,9 @@
 
 .product {
     position: absolute;
-    width: 5%;
+    width: 3%;
     border-radius: 3px;
-    left: 24%;
+    left: 25%;
     bottom: 23px;
     opacity: 0;
     z-index: 1;
